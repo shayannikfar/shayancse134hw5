@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Favorite page</title>
    </head>
 
@@ -21,6 +22,21 @@
         text-align: center;
   
      }
+
+     .nav{
+      font-size: larger;
+      background-color: skyblue;
+      font-weight: bold;
+      justify-content: center;
+      text-align: center;
+      list-style-type:none;
+      margin: 0;
+      padding: 0;
+     }
+     #fot{
+      text-align: center;
+     }
+
   </style>
   
    <body>
@@ -29,9 +45,9 @@
           <h1 id="name-h">
              SHAYAN'S WEBSITE
           </h1>
-          <br>
-          <br>
-      
+          <div class="nav">
+            <a  href="index.html"><img src="homeicon.png" width="40" height="40"></a>
+          </div>
       
       
       
@@ -42,20 +58,23 @@
 
 
       <main>
-        <h2>the audio that I LOVE!&#128150</h2><br>
+
+        <h2>My Favorite audio!&#128150</h2><br>
         <audio controls>
             <source src="voice.ogg" type="audio/ogg">
             Your browser does not support the audio element.
         </audio>
         <hr>
-        <h3>The video that I like</h3><br>
+        <h3>My Favorite Video</h3><br>
         <iframe width="500" height="400"src="https://www.youtube.com/embed/W7ToXJiMDLc">
         </iframe>
       </main>
 
 
       <footer>
-
+        <p id="fot">
+          Author: Shayan Nikfar
+        </p>
       </footer>
  </body>
 </html>
