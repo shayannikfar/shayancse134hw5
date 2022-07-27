@@ -1,5 +1,4 @@
 document.getElementById("Alert").addEventListener("click", show_ale);
-
 document.getElementById("alBot").addEventListener("click", clo_ale);
 document.getElementById("Confirm").addEventListener("click", show_con);
 document.getElementById("canBot").addEventListener("click", clo_con_false);
@@ -40,6 +39,7 @@ export function clo_ale(){
 export function show_con(){
     ds_but();
     document.getElementById("digCon").show();
+    document.getElementById("myOut").style.display = "none";
 
 
 }
@@ -81,7 +81,7 @@ export function clo_prom_ok(){
     
     else {
 
-        document.getElementById("myOut").innerHTML = "User didn't enter anything";
+        document.getElementById("myOut").innerHTML = "Prompt result: User didn't enter anything";
     }
     document.getElementById("myOut").style.display = "initial";
 
@@ -91,7 +91,7 @@ export function clo_prom_ok(){
 export function clo_prom_can(){
     en_but();
     document.getElementById("digProm").close();
-    document.getElementById("myOut").innerHTML = "User didn't enter anything";
+    document.getElementById("myOut").innerHTML = "Prompt result: User didn't enter anything";
     document.getElementById("myOut").style.display = "initial";
 
 }
@@ -108,7 +108,7 @@ export function clo_safprom_ok(){
     input1 = DOMPurify.sanitize(document.getElementById("usname2").value);
     if((input1 == null) && (input1 == "")){
 
-        document.getElementById("myOut").innerHTML = "User didn't enter anything";
+        document.getElementById("myOut").innerHTML = "Prompt result: User didn't enter anything";
         
     }
 
@@ -124,7 +124,7 @@ export function clo_safprom_ok(){
 export function clo_safprom_can(){
     en_but();
     document.getElementById("digSafProm").close();
-    document.getElementById("myOut").innerHTML = "User didn't enter anything";
+    document.getElementById("myOut").innerHTML = "Prompt result: User didn't enter anything";
     document.getElementById("myOut").style.display = "initial";
 
 }
