@@ -1,8 +1,15 @@
 document.getElementById("Alert").addEventListener("click", show_ale);
 
 document.getElementById("alBot").addEventListener("click", clo_ale);
-
-
+document.getElementById("Confirm").addEventListener("click", show_con);
+document.getElementById("canBot").addEventListener("click", clo_con_false);
+document.getElementById("okaybot").addEventListener("click", clo_con_true);
+document.getElementById("Promt").addEventListener("click", show_prom);
+document.getElementById("PromCanBot").addEventListener("click",clo_prom_can );
+document.getElementById("PromOkBot").addEventListener("click", clo_prom_ok);
+document.getElementById("Safer").addEventListener("click", show_safprom);
+document.getElementById("SaProOkBot").addEventListener("click", clo_safprom_ok);
+document.getElementById("SaPromCanBot").addEventListener("click", clo_safprom_can);
 
 export function en_but(){
     document.getElementById("Alert").disabled = false;
@@ -29,9 +36,6 @@ export function clo_ale(){
     en_but();
     document.getElementById("digAle").close();
 }
-document.getElementById("Alert").addEventListener("click", show_ale);
-
-document.getElementById("alBot").addEventListener("click", clo_ale);
 
 export function show_con(){
     ds_but();
