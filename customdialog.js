@@ -1,6 +1,6 @@
-document.getElementById("Alert").addEventListener("click", show_ale());
+document.getElementById("Alert").addEventListener("click", show_ale);
 
-document.getElementById("alBot").addEventListener("click", clo_ale());
+document.getElementById("alBot").addEventListener("click", clo_ale);
 
 
 
