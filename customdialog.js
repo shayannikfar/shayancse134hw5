@@ -27,6 +27,8 @@ export function ds_but(){
 export function show_ale(){
     ds_but();
     document.getElementById("digAle").show();
+    document.getElementById("myOut").innerHTML = "";
+    document.getElementById("myOut").style.display = "none";
 
 }
 
@@ -39,7 +41,7 @@ export function clo_ale(){
 export function show_con(){
     ds_but();
     document.getElementById("digCon").show();
-    document.getElementById("myOut").innerHTML="";
+    document.getElementById("myOut").style.display = "";
 
 
 }
