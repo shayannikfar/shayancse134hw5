@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Native Dialogs</title>
+    <script type="text/javascript" src="DOMPurify-main/DOMPurify-main/dist/purify.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Native dialogs?</h1>
+    </header>
+
+    <button id="Alert">ALERT</button>
+    <button id="Confirm">CONFIRM</button>
+    <button id="Promt">PROMT</button>
+    <button id="Safer">SAFER PROMT</button>
+    
+    <hr>
+    <output id="myout"></output>
+
+
+
+    <script>
+        document.getElementById("Alert").addEventListener("click", ()=> {alert("Alert pressed!")});
+        
+        const Conf = document.getElementById("Confirm");
+        Conf.addEventListener("click", conFunc);
+        function conFunc(){
+
+            let con_val = confirm("Do you confirm?");
+            document.getElementById("myout").innerHTML = `The value returned by the confirm method is : ${con_val}`;
+            document.getElementById("myout").style.display = "initial";
+
+        }
+
+        const Prom = document.getElementById("Promt");
+        
+        Prom.addEventListener("click", promFunc);
+        
+        function promFunc(){
+            let name_inp = prompt("What is your name?");
+            if((name_inp != null) && (name_inp != "")){
+
+                document.getElementById("myout").innerHTML = `Prompt result: ${name_inp}`;
+            }
+
+            else {
+
+                document.getElementById("myout").innerHTML = "Prompt result: User didn't enter anything";
+            }
+
+            document.getElementById("myout").style.display = "initial";
+       
+        }
+
+
+        const SafePr = document.getElementById("Safer");
+
+        SafePr.addEventListener("click", saPromFunc);
+
+        function saPromFunc(){
+            let name_inp2 = prompt("What is your name?");
+            if((name_inp2 != null) && (name_inp2 != "")){
+
+                document.getElementById("myout").innerHTML =`Prompt result: ${DOMPurify.sanitize(name_inp2)}`;
+           
+            }
+
+            else {
+
+                document.getElementById("myout").innerHTML = "Prompt result: User didn't enter anything";
+            }
+
+            document.getElementById("myout").style.display = "initial";
+
+            
+        }
+    </script>
+
+   
+
+
+</body>
+
+</html>
