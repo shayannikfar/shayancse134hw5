@@ -14,14 +14,14 @@ document.getElementById("SaPromCanBot").addEventListener("click", clo_safprom_ca
 export function en_but(){
     document.getElementById("Alert").disabled = false;
     document.getElementById("Confirm").disabled = false;
-    document.getElementById("Prompt").disabled = false;
+    document.getElementById("Promt").disabled = false;
     document.getElementById("Safer").disabled = false;
 }
 
 export function ds_but(){
     document.getElementById("Alert").disabled = true;
     document.getElementById("Confirm").disabled = true;
-    document.getElementById("Prompt").disabled = true;
+    document.getElementById("Promt").disabled = true;
     document.getElementById("Safer").disabled = true;
 }
 
