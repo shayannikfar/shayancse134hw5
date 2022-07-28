@@ -110,13 +110,13 @@ export function clo_safprom_ok(){
     input1 = DOMPurify.sanitize(document.getElementById("usname2").value);
     if((input1 == null) && (input1 == "")){
 
-        document.getElementById("myOut").innerHTML = "Prompt result: User didn't enter anything";
+        document.getElementById("myOut").innerHTML = "Safer Prompt result: User didn't enter anything";
         
     }
 
     else {
 
-        document.getElementById("myOut").innerHTML = `Prompt result: ${input1}`;
+        document.getElementById("myOut").innerHTML = `Safer Prompt result: ${input1}`;
     }
     
     document.getElementById("myOut").style.display = "initial";
@@ -126,7 +126,7 @@ export function clo_safprom_ok(){
 export function clo_safprom_can(){
     en_but();
     document.getElementById("digSafProm").close();
-    document.getElementById("myOut").innerHTML = "Prompt result: User didn't enter anything";
+    document.getElementById("myOut").innerHTML = "Safer Prompt result: User didn't enter anything";
     document.getElementById("myOut").style.display = "initial";
 
 }
