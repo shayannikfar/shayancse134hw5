@@ -87,8 +87,8 @@ function postHtml(post, mytemp){
     pclon.getElementById("edited").addEventListener('click', () => {
 
       document.getElementById("edtitle").value = Arrposts.filter(item => item.id === post.id)[0].title;
-      document.getElementById("eddate").value = Arrposts.filter(item => item.id === post.id)[0].date;
-      document.getElementById("edsummary").value = Arrposts.filter(item => item.id === post.id)[0].summary;
+      document.getElementById("eddate").value = Arrposts.filter(item => item.id === post.id)[1].date;
+      document.getElementById("edsummary").value = Arrposts.filter(item => item.id === post.id)[2].summary;
       uptoU = post.id;
       document.getElementById("editdialog").showModal();
     });
