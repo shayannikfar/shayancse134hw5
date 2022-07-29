@@ -1,9 +1,9 @@
 var Arrposts = [
     {
         id: '1',
-        title: 'what to do?',
-        date: '2022',
-        summary: 'have some rest',
+        title: "what to do?",
+        date: "2022",
+        summary: "have some rest",
       }
 ];
 var numpost = Arrposts.length;
@@ -26,9 +26,9 @@ function newpost(){
         id: '',
      };
 
-    newpostarr.title = cleanHTML`${document.getElementById("title").value}`;
-    newpostarr.date = cleanHTML`${document.getElementById("date").value}`;
-    newpostarr.summary = cleanHTML`${document.getElementById("summary").value}`;
+    newpostarr.title = cleanHTML`${document.getElementById('title').value}`;
+    newpostarr.date = cleanHTML`${document.getElementById('date').value}`;
+    newpostarr.summary = cleanHTML`${document.getElementById('summary').value}`;
     newpostarr.id=numpost++;
 
     let arr =[];
@@ -64,16 +64,11 @@ function updatePost(id) {
     upPost.summary = cleanHTML`${document.getElementById("edsummary").value}`;
     upPost.id=id;
     console.log(id);
-
-    let uparr =[];
-    uparr = Arrposts;
+    let uparr = Arrposts;
     uparr.push(upPost);
-
     htmlwritten();
     document.getElementById("edtitle").value = '';
-
     document.getElementById("eddate").value = '';
-
     document.getElementById("edsummary").value = '';
     document.getElementById("editpost").close();
 
