@@ -78,9 +78,9 @@ var uptoU;
 function postHtml(post, mytemp){
     let pclon = mytemp.content.cloneNode(true);
 
-    pclon.getElementById("titlepost").textContent=cleanHTML`${post.title}`;
-    pclon.getElementById("datepost").textContent=cleanHTML`${post.date}`;
-    pclon.getElementById("summarypost").textContent=cleanHTML`${post.summary}`;
+    pclon.getElementById("title").textContent=cleanHTML`${post.title}`;
+    pclon.getElementById("date").textContent=cleanHTML`${post.date}`;
+    pclon.getElementById("body").textContent=cleanHTML`${post.summary}`;
 
     
     pclon.getElementById("edited").addEventListener('click', () => {
