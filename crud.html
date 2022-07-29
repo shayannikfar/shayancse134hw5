@@ -22,34 +22,34 @@
 
     <ul id = "myPosts"></ul>
 
-    <template id="posted">
+    <template id="postedtemp">
         <li id="posteditem">
-            <h2 id="pname"></h2>
-            <p id="pdate"></p>
-            <p id="psummary"></p>
+            <h2 id="title"></h2>
+            <p id="date"></p>
+            <p id="body"></p>
             <p id="edited">edit</p>
             <p id="deleted">delete</p>
           </li>
     </template>
 
-    <dialog id="newpost">
+    <dialog id="dialogpost">
         <table method="dialog">
             <tr>
-                <td style="text-align: center;"><label for="title1">Post Name</label>
+                <td style="text-align: center;"><label for="titlepost">Post Name</label>
                 </td>
-                 <td style="text-align: center;"><input type="text" id="title" name="title">
-                </td>
-            </tr>
-            <tr>
-                <td style="text-align: center;"><label for="date">Date posted</label>
-                </td>
-                 <td style="text-align: center;"><input type="text" id="date" name="date">
+                 <td style="text-align: center;"><input type="text" id="titlepost" name="titlepost">
                 </td>
             </tr>
             <tr>
-                <td style="text-align: center;"><label for="summary">Post Summary</label>
+                <td style="text-align: center;"><label for="datepost">Date posted</label>
                 </td>
-                 <td style="text-align: center;"><textarea id="summary" name="summary"></textarea>
+                 <td style="text-align: center;"><input type="text" id="datepost" name="datepost">
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;"><label for="summarypost">Post Summary</label>
+                </td>
+                 <td style="text-align: center;"><textarea id="summarypost" name="summarypost"></textarea>
                 </td>
             </tr>
           
@@ -61,24 +61,24 @@
           
     </dialog>
 
-    <dialog id="editpost">
+    <dialog id="dialogupdate">
         <table method="dialog">
             <tr>
-                <td style="text-align: center;"><label for="edtitle">Post Name</label>
+                <td style="text-align: center;"><label for="titleupdate">Post Name</label>
                 </td>
-                 <td style="text-align: center;"><input type="text" id="edtitle" name="edtitle">
-                </td>
-            </tr>
-            <tr>
-                <td style="text-align: center;"><label for="eddate">Date posted</label>
-                </td>
-                 <td style="text-align: center;"><input type="text" id="eddate" name="eddate">
+                 <td style="text-align: center;"><input type="text" id="titleupdate" name="titleupdate">
                 </td>
             </tr>
             <tr>
-                <td style="text-align: center;"><label for="edsummary">Post Summary</label>
+                <td style="text-align: center;"><label for="dateupdate">Date posted</label>
                 </td>
-                 <td style="text-align: center;"><textarea id="edsummary" name="edsummary"></textarea>
+                 <td style="text-align: center;"><input type="text" id="dateupdate" name="dateupdate">
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;"><label for="updatesummary">Post Summary</label>
+                </td>
+                 <td style="text-align: center;"><textarea id="updatesummary" name="updatesummary"></textarea>
                 </td>
             </tr>
           
