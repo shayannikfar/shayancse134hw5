@@ -60,7 +60,7 @@ function updatePost(id) {
 
     upPost.title = cleanHTML`${document.getElementById("titleupdate").value}`;
     upPost.date = cleanHTML`${document.getElementById("dateupdate").value}`;
-    upPost.summary = cleanHTML`${document.getElementById("summaryupdate").value}`;
+    upPost.summary = cleanHTML`${document.getElementById("updatesummary").value}`;
     upPost.id=id;
     console.log(id);
     let uparr = Arrposts;
@@ -68,7 +68,7 @@ function updatePost(id) {
     htmlwritten();
     document.getElementById("titleupdate").value = '';
     document.getElementById("dateupdate").value = '';
-    document.getElementById("summaryupdate").value = '';
+    document.getElementById("updatesummary").value = '';
     document.getElementById("dialogupdate").close();
 
 }
@@ -87,7 +87,7 @@ function postHtml(post, mytemp){
 
       document.getElementById("titleupdate").value = Arrposts.filter(item => item.id === post.id)[0].title;
       document.getElementById("dateupdate").value = Arrposts.filter(item => item.id === post.id)[0].date;
-      document.getElementById("summaryupdate").value = Arrposts.filter(item => item.id === post.id)[0].summary;
+      document.getElementById("updatesummary").value = Arrposts.filter(item => item.id === post.id)[0].summary;
       uptoU = post.id;
       document.getElementById("dialogupdate").showModal();
     });
