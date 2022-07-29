@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Posts Summary</title> 
+    <script type="text/javascript" src="DOMPurify-main/DOMPurify-main/dist/purify.js"></script>
+    <script type="module" src="/blog.js"></script>
+  
+
+</head>
+
+<body>
+
+   
+
+    <header>
+        <h1>POST SUMMARY</h1>
+    </header>
+
+    <ul id = "myPosts"></ul>
+
+    <template id="postedtemp">
+        <li id="posteditem">
+            <h2 id="title"></h2>
+            <p id="date"></p>
+            <p id="body"></p>
+            <p id="edited">edit</p>
+            <p id="deleted">delete</p>
+          </li>
+    </template>
+
+    <dialog id="dialogpost">
+       <form method="dialog">
+        <table>
+            <tr>
+                <td style="text-align: center;"><label for="titlepost">Post Name</label>
+                </td>
+                 <td style="text-align: center;"><input type="text" id="titlepost" name="titlepost">
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;"><label for="datepost">Date posted</label>
+                </td>
+                 <td style="text-align: center;"><input type="text" id="datepost" name="datepost">
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;"><label for="summarypost">Post Summary</label>
+                </td>
+                 <td style="text-align: center;"><textarea id="summarypost" name="summarypost"></textarea>
+                </td>
+            </tr>
+          
+            <tr>
+                <td style="text-align: left;"><button value="cancel">Cancel</button>  <button value="default">Save</button></td>
+            </tr>
+        </table>
+       </form>
+  
+          
+    </dialog>
+
+    <dialog id="dialogupdate">
+        <form method="dialog">
+        <table>
+            <tr>
+                <td style="text-align: center;"><label for="titleupdate">Post Name</label>
+                </td>
+                 <td style="text-align: center;"><input type="text" id="titleupdate" name="titleupdate">
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;"><label for="dateupdate">Date posted</label>
+                </td>
+                 <td style="text-align: center;"><input type="text" id="dateupdate" name="dateupdate">
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;"><label for="updatesummary">Post Summary</label>
+                </td>
+                 <td style="text-align: center;"><textarea id="updatesummary" name="updatesummary"></textarea>
+                </td>
+            </tr>
+          
+            <tr>
+                <td style="text-align: left;"><button value="cancel">Cancel</button>  <button value="default">Update</button></td>
+            </tr>
+        </table>
+        </form>
+          
+    </dialog>
+
+    <button id="postcreated">New Post</button>
+
+
+
+
+</body>
+</html>
