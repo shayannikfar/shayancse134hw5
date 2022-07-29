@@ -36,6 +36,11 @@ function newpost(){
     arr.push(newpost);
 
     htmlwritten();
+    document.getElementById("title").value = '';
+
+    document.getElementById("date").value = '';
+
+    document.getElementById("summary").value = '';
     document.getElementById("newpost").close();
 
 
@@ -65,6 +70,11 @@ function updatePost(id) {
     uparr.push(upPost);
 
     htmlwritten();
+    document.getElementById("edtitle").value = '';
+
+    document.getElementById("eddate").value = '';
+
+    document.getElementById("edsummary").value = '';
     document.getElementById("editpost").close();
 
 }
