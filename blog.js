@@ -1,9 +1,9 @@
 var Arrposts = [
     {
         id: '1',
-        title: 'what to do?',
-        date: '2022',
-        summary: 'have some rest',
+        title: "what to do?",
+        date: "2022",
+        summary: "have some rest",
       }
 ];
 var numpost = Arrposts.length;
@@ -26,9 +26,9 @@ function newpost(){
         id: '',
      };
 
-    newpostarr.title = cleanHTML`${document.getElementById('title').value}`;
-    newpostarr.date = cleanHTML`${document.getElementById('date').value}`;
-    newpostarr.summary = cleanHTML`${document.getElementById('summary').value}`;
+    newpostarr.title = cleanHTML`${document.getElementById("title").value}`;
+    newpostarr.date = cleanHTML`${document.getElementById("date").value}`;
+    newpostarr.summary = cleanHTML`${document.getElementById("summary").value}`;
     newpostarr.id=numpost++;
 
     let arr =[];
@@ -36,12 +36,12 @@ function newpost(){
     arr.push(newpost);
 
     htmlwritten();
-    document.getElementById('title').value = '';
+    document.getElementById("title").value = '';
 
-    document.getElementById('date').value = '';
+    document.getElementById("date").value = '';
 
-    document.getElementById('summary').value = '';
-    document.getElementById('newpost').close();
+    document.getElementById("summary").value = '';
+    document.getElementById("newpost").close();
 
 
 }
@@ -59,9 +59,9 @@ function updatePost(id) {
 
 
 
-    upPost.title = cleanHTML`${document.getElementById('edtitle').value}`;
-    upPost.date = cleanHTML`${document.getElementById('eddate').value}`;
-    upPost.summary = cleanHTML`${document.getElementById('edsummary').value}`;
+    upPost.title = cleanHTML`${document.getElementById("edtitle").value}`;
+    upPost.date = cleanHTML`${document.getElementById("eddate").value}`;
+    upPost.summary = cleanHTML`${document.getElementById("edsummary").value}`;
     upPost.id=id;
     console.log(id);
 
@@ -70,46 +70,46 @@ function updatePost(id) {
     uparr.push(upPost);
 
     htmlwritten();
-    document.getElementById('edtitle').value = '';
+    document.getElementById("edtitle").value = '';
 
-    document.getElementById('eddate').value = '';
+    document.getElementById("eddate").value = '';
 
-    document.getElementById('edsummary').value = '';
-    document.getElementById('editpost').close();
+    document.getElementById("edsummary").value = '';
+    document.getElementById("editpost").close();
 
 }
 
-let mytemp = document.getElementById('posted');
+let mytemp = document.getElementById("posted");
 var uptoU;
 function postHtml(post, mytemp){
     let pclon = mytemp.content.cloneNode(true);
 
-    pclon.getElementById('pname').textContent=cleanHTML`${post.title}`;
-    pclon.getElementById('pdate').textContent=cleanHTML`${post.date}`;
-    pclon.getElementById('psummary').textContent=cleanHTML`${post.summary}`;
+    pclon.getElementById("pname").textContent=cleanHTML`${post.title}`;
+    pclon.getElementById("pdate").textContent=cleanHTML`${post.date}`;
+    pclon.getElementById("psummary").textContent=cleanHTML`${post.summary}`;
 
     
-    pclon.getElementById('edited').addEventListener('click', () => {
+    pclon.getElementById("edited").addEventListener('click', () => {
 
-      document.getElementById('edtitle').value = Arrposts.filter(item => item.id === post.id)[0].title;
-      document.getElementById('eddate').value = Arrposts.filter(item => item.id === post.id)[0].date;
-      document.getElementById('edsummary').value = Arrposts.filter(item => item.id === post.id)[0].summary;
+      document.getElementById("edtitle").value = Arrposts.filter(item => item.id === post.id)[0].title;
+      document.getElementById("eddate").value = Arrposts.filter(item => item.id === post.id)[0].date;
+      document.getElementById("edsummary").value = Arrposts.filter(item => item.id === post.id)[0].summary;
       uptoU = post.id;
-      document.getElementById('editdialog').showModal();
+      document.getElementById("editdialog").showModal();
     });
   
-    pclon.getElementById('deleted').addEventListener('click', () => {
+    pclon.getElementById("deleted").addEventListener('click', () => {
       postdeleted(post.id)
     });
   
-    document.getElementById('myPosts').prepend(pclon);
+    document.getElementById("myPosts").prepend(pclon);
 
 }
 
 
 function htmlwritten(){
     if(`content` in document.createElement('template')){
-        document.getElementById('myPosts').innerHTML='';
+        document.getElementById("myPosts").innerHTML='';
         let array = Arrposts;
         array = array.sort((p1, p2) => {return p1.id - p2.id});
         array.forEach(post => {
@@ -119,7 +119,7 @@ function htmlwritten(){
         );
     }
     else {
-        alert('item not found');
+        alert("item not found");
     }
 
 }
@@ -127,23 +127,23 @@ function htmlwritten(){
 document.addEventListener('DOMContentLoaded', () => {
     htmlwritten(Arrposts);
   
-    document.getElementById('postcreated').addEventListener('click', () => {
-      if (typeof document.getElementById('newpost').showModal === 'function') {
-        document.getElementById('newpost').showModal();
+    document.getElementById("postcreated").addEventListener('click', () => {
+      if (typeof document.getElementById("newpost").showModal === "function") {
+        document.getElementById("newpost").showModal();
       } 
       else {
-        alert('not supported');
+        alert("not supported");
       }
     });
   
-    document.getElementById('newpost').addEventListener('close', () => {
-      if (document.getElementById('newpost').returnValue === 'default') {
+    document.getElementById("newpost").addEventListener('close', () => {
+      if (document.getElementById("newpost").returnValue === 'default') {
         newpost();
       }
     });
   
-    document.getElementById('editpost').addEventListener('close', () => {
-      if (document.getElementById('editpost').returnValue === 'default') {
+    document.getElementById("editpost").addEventListener('close', () => {
+      if (document.getElementById("editpost").returnValue === 'default') {
         updatePost(uptoU);
       }
     });
