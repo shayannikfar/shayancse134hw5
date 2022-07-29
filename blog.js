@@ -36,6 +36,7 @@ function newpost(){
     arr.push(newpost);
 
     htmlwritten();
+    document.getElementById("newpost").close();
 
 
 }
@@ -64,6 +65,7 @@ function updatePost(id) {
     uparr.push(upPost);
 
     htmlwritten();
+    document.getElementById("editpost").close();
 
 }
 
