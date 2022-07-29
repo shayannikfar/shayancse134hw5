@@ -1,9 +1,9 @@
 var Arrposts = [
     {
         id: '1',
-        title: "what to do?",
-        date: "2022",
-        summary: "have some rest",
+        title: 'what to do?',
+        date: '2022',
+        summary: 'have some rest',
       }
 ];
 var numpost = Arrposts.length;
